@@ -52,4 +52,14 @@ public class UserInfoController {
 
         return "success";
     }
+
+
+    /**
+     * ajax提交页面
+     * @return
+     */
+    @RequestMapping(value = "ajax")
+    public String ajax(){
+        return "ajaxSubmit";
+    }
 }
