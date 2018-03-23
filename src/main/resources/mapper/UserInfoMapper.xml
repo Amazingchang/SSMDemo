@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.changjie.dao.UserInfoDao">
+
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <insert id="register" parameterType="UserInfo">
+        insert into user_info
+        (user_name, password, photo, sex, birth, email, create_time)
+        values
+        (#{userName}, #{passsWord}, #{photo}, #{sex}, #{birth}, #{email}, #{createTime})
+    </insert>
+
+
+</mapper>

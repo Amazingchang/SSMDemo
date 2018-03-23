@@ -1,15 +1,11 @@
--- 创建图书表
-CREATE TABLE `book` (
-  `book_id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '图书ID',
-  `name` varchar(100) NOT NULL COMMENT '图书名称',
-  `number` int(11) NOT NULL COMMENT '馆藏数量',
-  PRIMARY KEY (`book_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='图书表';
-
--- 初始化图书数据
-INSERT INTO `book` (`book_id`, `name`, `number`)
-VALUES
-    (1000, 'Java程序设计', 10),
-    (1001, '数据结构', 10),
-    (1002, '设计模式', 10),
-    (1003, '编译原理', 10);
+create table `user_info` (
+  `id` int(11) not null auto_increment comment '用户id',
+  `user_name` varchar(50)  null comment '用户名',
+  `password` varchar(50)  null comment '密码',
+	`photo` varchar(200) null comment '头像',
+	`sex` varchar(10)  null comment '性别',
+	`birth` date  null comment '生日',
+	`email` varchar(50)  null comment '邮箱',
+	`create_time`  timestamp  null comment '创建时间',
+  primary key (`id`)
+) engine=innodb auto_increment=1 default charset=utf8 comment='用户信息表';
