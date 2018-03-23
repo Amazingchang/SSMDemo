@@ -4,6 +4,7 @@ import me.changjie.entity.UserInfo;
 import me.changjie.service.UserInfoService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import java.util.Date;
@@ -19,11 +20,12 @@ public class UserInfoController {
 
 
     @RequestMapping(value = "register")
+    @ResponseBody
     public String register(UserInfo userInfo){
 
         userInfo.setCreateTime(new Date());
         System.out.println(userInfo);
         userInfoService.register(userInfo);
-        return "aaa";
+        return "success";
     }
 }
