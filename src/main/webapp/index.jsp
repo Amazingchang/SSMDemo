@@ -15,7 +15,7 @@
     </div>
     <div class="row">
         <div class="container">
-            <form class="col s12" action="register" method="post">
+            <form class="col s12" action="register" method="post" enctype="multipart/form-data">
                 <div class="input-field">
                     用户名: <input id="userName" name="userName" type="text" class="validate" length="10">
                 </div>
@@ -25,7 +25,7 @@
                 <div class="file-field input-field">
                     <div class="btn">
                         <span>头像</span>
-                        <input type="file">
+                        <input type="file" name="profilePicture">
                     </div>
                     <div class="file-path-wrapper">
                         <input class="file-path validate" type="text">
