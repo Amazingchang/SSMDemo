@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
+
+    <!--控制台日志输出配置-->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <!-- encoders are by default assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
         <encoder>
@@ -7,7 +9,16 @@
         </encoder>
     </appender>
 
-    <root level="debug">
+    <!--指定包的日志级别及输出方式-->
+    <!--additivity="false"表示在logger(category)中定义日志输在root中过滤掉,防止日志重复-->
+    <logger name="me.changjie" additivity="false">
+        <level value="info"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!--指定root节点的日志级别-->
+    <root level="ERROR">
+        <!--指定root节点的输出方式，可指定多个-->
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>
