@@ -19,5 +19,7 @@ public class MainTest {
         log.info("22222222");
 
         log.error("3333333");
+
+        System.out.println(1111);
     }
 }
